@@ -94,6 +94,15 @@ button:active:focus:not(:disabled):not(.disabled) {
   }
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 @import "partials/cards";
 @import "partials/forms";
 @import "partials/buttons";

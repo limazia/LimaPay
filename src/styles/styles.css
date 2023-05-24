@@ -87,6 +87,14 @@ button:active:focus:not(:disabled):not(.disabled) {
   border-left: none;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
 .card {
   word-wrap: break-word;
   background-color: #fff;
@@ -115,13 +123,7 @@ button:active:focus:not(:disabled):not(.disabled) {
 }
 .card-method.disabled {
   cursor: not-allowed;
-  background-color: rgba(255, 255, 255, 0.3);
-  fill: #000;
-  color: #000;
-  transition: 0.5s ease;
-}
-.card-method.disabled:hover {
-  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 0.5;
 }
 
 label {

@@ -1,9 +1,9 @@
-import { Tree } from "@phosphor-icons/react";
+import { Cardholder } from "@phosphor-icons/react";
 
 export function Logo() {
   return (
-    <>
-      <Tree size={32} className="mr-2" /> Lima<b>Pay</b>
-    </>
+    <div className="logo">
+      <Cardholder size={32} className="mr-1" /> Lima<b>Pay</b>
+    </div>
   );
 }
