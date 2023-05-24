@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 import { useForm } from "@contexts/FormContext";
+import { getStepDescription, getStepTitle } from "@utils/steps";
 
 import { StepsSidebar } from "@components/StepsSidebar";
 import { PaymentMethods } from "@components/PaymentMethods";
@@ -9,6 +10,7 @@ import { PayamentForm } from "@components/PayamentForm";
 import { PaymentProof } from "@components/PaymentProof";
 import { Loading } from "@components/Loading";
 import { AnimatedComponent } from "@components/AnimatedComponent";
+import { SectionTitle } from "@components/SectionTitle";
 import { Logo } from "@components/Logo";
 
 export function App() {
@@ -76,7 +78,17 @@ export function App() {
             <div className="container">
               <div className="row">
                 <div className="col-lg-12 col-xl-12 mx-auto">
-                  <AnimatedComponent>{renderForm(currentStep.step)}</AnimatedComponent>
+                  <AnimatedComponent>
+                    <>
+                      {currentStep.step !== "PROOF" && (
+                        <SectionTitle
+                          title={getStepTitle(currentStep.step)}
+                          subtitle={getStepDescription(currentStep.step)}
+                        />
+                      )}
+                      {renderForm(currentStep.step)}
+                    </>
+                  </AnimatedComponent>
                 </div>
               </div>
             </div>

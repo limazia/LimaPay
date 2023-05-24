@@ -1,6 +1,7 @@
 import { CheckCircle } from "@phosphor-icons/react";
 
 import { useForm } from "@contexts/FormContext";
+import { getStepDescription, getStepTitle } from "@utils/steps";
 
 interface StepStatus {
   step: string;
@@ -53,36 +54,6 @@ export function StepsSidebar() {
       completedFields: [],
     },
   ];
-
-  const getStepTitle = (step: string): string => {
-    switch (step) {
-      case "SELECT_METHOD":
-        return "Formas de pagamento";
-      case "PERSONAL_DETAILS":
-        return "Informações pessoais";
-      case "PAYMENT":
-        return "Pagamento";
-      case "PROOF":
-        return "Comprovante";
-      default:
-        return "";
-    }
-  };
-
-  const getStepDescription = (step: string): string => {
-    switch (step) {
-      case "SELECT_METHOD":
-        return "Selecione um método de pagamento";
-      case "PERSONAL_DETAILS":
-        return "Preencha seus dados pessoais";
-      case "PAYMENT":
-        return "Efetue o pagamento";
-      case "PROOF":
-        return "Receba o comprovante de pagamento";
-      default:
-        return "";
-    }
-  };
 
   return (
     <>

@@ -1,2 +1,2 @@
-# LimaPay 
-Demo do [projeto](https://lima-pay.vercel.app/)
+# LimaPay
+Demo do [projeto](https://limapay.vercel.app)
