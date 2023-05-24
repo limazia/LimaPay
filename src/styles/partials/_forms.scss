@@ -1,0 +1,29 @@
+label {
+  color: #888e9a;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 2px solid #e9ebef;
+  color: #637089;
+  text-indent: 5px;
+  transition: 0.5s ease;
+
+  &:focus {
+    background-color: #fff;
+    color: #637089;
+    border: 2px solid #bec1c6;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: #bcc0c5;
+    font-size: 0.9rem;
+  }
+}

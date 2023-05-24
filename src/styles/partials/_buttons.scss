@@ -1,0 +1,41 @@
+.btn-pay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #8257e5;
+  height: 60px;
+  border-radius: 0.375rem;
+  font-weight: bold;
+  transition: 0.5s ease;
+
+  svg {
+    fill: #fff;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #926de8;
+  }
+
+  &:disabled,
+  button[disabled],
+  a[disabled] {
+    cursor: not-allowed;
+  }
+}
+
+.btn-back {
+  transition: 0.5s ease;
+  fill: #b8b3b3;
+
+  &:hover {
+    fill: #cbc7c7;
+  }
+
+  &:disabled,
+  button[disabled],
+  a[disabled] {
+    cursor: not-allowed;
+  }
+}

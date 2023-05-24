@@ -1,0 +1,50 @@
+.steps {
+  cursor: pointer;
+
+  .step-title,
+  .step-description,
+  svg {
+    transition: 0.5s ease;
+  }
+
+  .step-title {
+    font-weight: bold;
+    color: rgba(108, 117, 125, 0.4);
+  }
+
+  svg {
+    fill: rgba(108, 117, 125, 0.4);
+  }
+
+  .step-description {
+    color: rgba(108, 117, 125, 0.4);
+  }
+
+  .active {
+    svg {
+      fill: #0a9250;
+    }
+
+    .step-title {
+      color: #000;
+    }
+
+    .step-description {
+      color: #6c757d;
+    }
+  }
+
+  .completed {
+    svg {
+      fill: rgba(10, 146, 80, 0.5);
+    }
+
+    .step-title {
+      color: rgba(108, 117, 125, 0.4);
+    }
+
+    .step-description {
+      color: rgba(108, 117, 125, 0.4);
+    }
+  }
+}

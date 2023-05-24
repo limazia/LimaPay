@@ -1,5 +1,5 @@
 {
-  "name": "template",
+  "name": "limapay",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,12 +10,22 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.0.9",
+    "framer-motion": "^10.12.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-input-mask": "^2.0.4",
+    "react-router-dom": "^6.11.1",
+    "react-toastify": "^9.1.2",
+    "react-topbar-progress-indicator": "^4.1.1",
+    "styled-components": "^5.0.0"
   },
   "devDependencies": {
+    "@types/node": "^20.2.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/react-input-mask": "^3.0.2",
+    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.59.5",
     "@typescript-eslint/parser": "^5.59.5",
     "@vitejs/plugin-react": "^4.0.0",
