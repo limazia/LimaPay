@@ -1,7 +1,6 @@
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 
-import { Toastify } from "@components/Toastify";
 import { FormProvider } from "@contexts/FormContext";
 import { Router } from "./Router";
 
@@ -14,7 +13,6 @@ if (rootElement) {
     <BrowserRouter>
       <FormProvider>
         <Router />
-        <Toastify autoClose={5000} />
       </FormProvider>
     </BrowserRouter>
   );

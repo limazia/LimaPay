@@ -1,5 +1,4 @@
 import { Check, ArrowLeft } from "@phosphor-icons/react";
-import { toast } from "react-toastify";
 import InputMask from "react-input-mask";
 
 import { useForm, StepOptions } from "@contexts/FormContext";
@@ -11,8 +10,7 @@ export function PayamentForm() {
 
   const handleSubmit = async () => {
     if (validate()) {
-      toast.error(<span>🐎 Preencha todos os campos!</span>);
-
+      alert("🐎 Preencha todos os campos!");
       return;
     }
 

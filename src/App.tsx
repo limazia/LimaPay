@@ -7,7 +7,7 @@ import { StepsSidebar } from "@components/StepsSidebar";
 import { PaymentMethods } from "@components/PaymentMethods";
 import { PersonalDetails } from "@components/PersonalDetails";
 import { PayamentForm } from "@components/PayamentForm";
-import { PaymentProof } from "@components/PaymentProof";
+import { PaymentApproved } from "@components/PaymentApproved";
 import { Loading } from "@components/Loading";
 import { AnimatedComponent } from "@components/AnimatedComponent";
 import { SectionTitle } from "@components/SectionTitle";
@@ -24,8 +24,8 @@ export function App() {
         return <PersonalDetails />;
       case "PAYMENT":
         return <PayamentForm />;
-      case "PROOF":
-        return <PaymentProof />;
+      case "PAYMENT_APPROVED":
+        return <PaymentApproved />;
       case "LOADING":
         return <Loading />;
       default:
@@ -80,7 +80,7 @@ export function App() {
                 <div className="col-lg-12 col-xl-12 mx-auto">
                   <AnimatedComponent>
                     <>
-                      {currentStep.step !== "PROOF" && (
+                      {currentStep.step !== "PAYMENT_APPROVED" && (
                         <SectionTitle
                           title={getStepTitle(currentStep.step)}
                           subtitle={getStepDescription(currentStep.step)}

@@ -6,7 +6,7 @@ export const getStepTitle = (step: string): string => {
       return "Informações pessoais";
     case "PAYMENT":
       return "Pagamento";
-    case "PROOF":
+    case "PAYMENT_APPROVED":
       return "Comprovante";
     default:
       return "";
@@ -21,7 +21,7 @@ export const getStepDescription = (step: string): string => {
       return "Preencha seus dados pessoais";
     case "PAYMENT":
       return "Efetue o pagamento";
-    case "PROOF":
+    case "PAYMENT_APPROVED":
       return "Receba o comprovante de pagamento";
     default:
       return "";

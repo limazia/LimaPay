@@ -17,7 +17,7 @@ export function StepsSidebar() {
       (step === "PAYMENT" && currentStep.finish)
     ) {
       return "active";
-    } else if (step === "PROOF") {
+    } else if (step === "PAYMENT_APPROVED") {
       return "";
     } else if (completedFields.every((field) => !!field)) {
       return "completed";
@@ -50,7 +50,7 @@ export function StepsSidebar() {
       ],
     },
     {
-      step: "PROOF",
+      step: "PAYMENT_APPROVED",
       completedFields: [],
     },
   ];

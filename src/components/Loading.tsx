@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { toast } from "react-toastify";
+
 
 import { useForm, StepOptions } from "@contexts/FormContext";
 
@@ -10,11 +10,7 @@ export function Loading() {
 
   useEffect(() => {
     if (currentStep.finish) {
-      const timer = setTimeout(() => {
-        setCurrentStep({ step: StepOptions.PROOF });
-
-        toast.success(<span>🎉 Compra aprovada!</span>);
-      }, 3000);
+      const timer = setTimeout(() => setCurrentStep({ step: StepOptions.PAYMENT_APPROVED }), 3000);
 
       return () => clearTimeout(timer);
     }
