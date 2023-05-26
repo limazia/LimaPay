@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 
-
 import { useForm, StepOptions } from "@contexts/FormContext";
 
 import { Spinner } from "@components/Spinner";
