@@ -77,7 +77,7 @@ export function App() {
                           subtitle={getStepDescription(currentStep.step)}
                         />
                       )}
-                      {components[currentStep.step] ?? <Loading />}ss
+                      {components[currentStep.step] ?? <Loading />}
                     </>
                   </AnimatedComponent>
                 </div>
