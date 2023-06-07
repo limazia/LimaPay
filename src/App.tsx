@@ -16,21 +16,12 @@ import { Logo } from "@components/Logo";
 export function App() {
   const { currentStep } = useForm();
 
-  const renderForm = (currentStep: string) => {
-    switch (currentStep) {
-      case "SELECT_METHOD":
-        return <PaymentMethods />;
-      case "PERSONAL_DETAILS":
-        return <PersonalDetails />;
-      case "PAYMENT":
-        return <PayamentForm />;
-      case "PAYMENT_APPROVED":
-        return <PaymentApproved />;
-      case "LOADING":
-        return <Loading />;
-      default:
-        return <Loading />;
-    }
+  const components = {
+    SELECT_METHOD: <PaymentMethods />,
+    PERSONAL_DETAILS: <PersonalDetails />,
+    PAYMENT: <PayamentForm />,
+    PAYMENT_APPROVED: <PaymentApproved />,
+    LOADING: <Loading />,
   };
 
   return (
@@ -86,7 +77,7 @@ export function App() {
                           subtitle={getStepDescription(currentStep.step)}
                         />
                       )}
-                      {renderForm(currentStep.step)}
+                      {components[currentStep.step] ?? <Loading />}
                     </>
                   </AnimatedComponent>
                 </div>
